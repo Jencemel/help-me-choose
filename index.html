@@ -28,10 +28,6 @@
 
        $('.addOption').click(add_option)
 
-       /*en lista som for-loopar innehållet i det vi matar in
-       funktion för att visa listan. Lägga in värdet i input i listan.
-       Options betyder att du tittar i listan som heter options.
-       This betyder att du tittar på just det värde du är i nu och val visar värdet*/
        var options = []
        var submit = function(){
          $('.inputSection').hide()
@@ -39,17 +35,13 @@
          $('input').each(function(){
            options.push($(this).val())
          })
-         /*bara för att visa i consolloggen vad som är i listan*/
-        /* console log options*/
-        /*hitta en vinnare med en randomfunktion
-        Math.random ger en siffra mellan 0 och 1 multiplicerat med längden på listan.
-        Sen körs Math floor för att plocka ut en siffra från det multiplicerade talet.*/
-          var winner = options[Math.floor(Math.random() * options.lenght)]
-          console.log(winner)
-          $('.resultSection').text(winner)
-         }
-         /*koppla knappen till funktionen "submit".*/
-         $('.submit').click(submit)
+         console.log(options)
+
+         var winner = options [Math.floor(Math.random() * options.lenght)]
+         /*console.log(winner)*/
+         $('.resultSection').text(winner)
+       }
+       $('.submit').click(submit)
      })
     </script>
   </body>
